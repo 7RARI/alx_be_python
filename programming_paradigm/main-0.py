@@ -1,3 +1,4 @@
+# main-0.py
 import sys
 from bank_account import BankAccount
 
@@ -14,14 +15,14 @@ def main():
 
     if command == "deposit" and amount is not None:
         account.deposit(amount)
-        print(f"Deposited: ${amount:.2f}")  # <- format 2 decimals
+        print(f"Deposited: ${amount:.2f}")  # 2 decimals
     elif command == "withdraw" and amount is not None:
         if account.withdraw(amount):
-            print(f"Withdrew: ${amount:.2f}")  # <- format 2 decimals
+            print(f"Withdrew: ${amount:.2f}")  # 2 decimals
         else:
             print("Insufficient funds.")
     elif command == "display":
-        account.display_balance()
+        account.display_balance()  # already fixed
     else:
         print("Invalid command.")
 
